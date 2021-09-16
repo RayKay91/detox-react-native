@@ -1,6 +1,6 @@
 ## Quick guide to setting up Detox end 2 end testing with React Native
 
-#### (iOS & Jest as test runner)
+### (iOS & Jest as test runner)
 
 I'm using yarn but you can switch it out for `npm` too.
 
@@ -29,7 +29,7 @@ I'm using yarn but you can switch it out for `npm` too.
 
 ---
 
-Example test:
+### Example test:
 
 ```js
 describe('Login flow', () => {
@@ -50,7 +50,7 @@ describe('Login flow', () => {
 
 ---
 
-The Device object is globally available in the test files and has several methods. It facilitates control of the attached device.
+### The Device object is globally available in the test files and has several methods. It facilitates control of the attached device.
 
 ```js
 device.launchApp()
@@ -60,7 +60,7 @@ device.openUrl()
 // and more
 ```
 
-For a full list of methods visit: https://github.com/wix/Detox/blob/master/docs/APIRef.DeviceObjectAPI.md
+#### For a full list of methods visit: https://github.com/wix/Detox/blob/master/docs/APIRef.DeviceObjectAPI.md
 
 The tests are comprised of 3 parts - the **matcher** + the **action** + the **expectation**.
 
@@ -72,7 +72,7 @@ Examples:
 - `.by.label()`
 - `.withAncestor()`
 
-- The list of matchers can be found: https://github.com/wix/Detox/blob/master/docs/APIRef.Matchers.md
+#### The list of matchers can be found: https://github.com/wix/Detox/blob/master/docs/APIRef.Matchers.md
 
 2. The ***action*** performs an 'action' on the matched element
 
@@ -82,7 +82,7 @@ Examples:
 -   `.scroll()`
 -   `.longPress()` 
    
-- The list of actions can be found here: https://github.com/wix/Detox/blob/master/docs/APIRef.ActionsOnElement.md
+#### The list of actions can be found here: https://github.com/wix/Detox/blob/master/docs/APIRef.ActionsOnElement.md
 
 3. The ***expectation*** is your expectation of what should be happening (the criteria on which the test should pass/fail)
 Examples:
@@ -91,7 +91,7 @@ Examples:
 - `.toExist()`
 - `.toBeFocused()`
 
-- The list of expectations can be found here: https://github.com/wix/Detox/blob/master/docs/APIRef.Expect.md
+#### The list of expectations can be found here: https://github.com/wix/Detox/blob/master/docs/APIRef.Expect.md
 
 
 ---
@@ -114,5 +114,7 @@ To install:
 
 
 --
+
+### Detox + React Native + Android
 
 Setting up Android is a lot more involved. Follow the guide here: https://github.com/wix/Detox/blob/master/docs/Introduction.Android.md
