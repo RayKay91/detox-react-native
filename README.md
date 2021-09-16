@@ -29,6 +29,25 @@ I'm using yarn but you can switch it out for `npm` too.
 
 ---
 
+Example test:
+
+```js
+describe('Login flow', () => {
+    
+  it('should login successfully', async () => {
+    await device.reloadReactNative();
+    
+    await element(by.id('email')).typeText('john@example.com');
+    await element(by.id('password')).typeText('123456');
+    await element(by.text('Login')).tap();
+      
+    await expect(element(by.text('Welcome'))).toBeVisible();
+    await expect(element(by.id('email'))).toNotExist();
+  });
+  
+});
+```
+
 ---
 
 The Device object is globally available in the test files and has several methods. It facilitates control of the attached device.
@@ -95,24 +114,5 @@ To install:
 
 
 --
-
-Example test:
-
-```js
-describe('Login flow', () => {
-    
-  it('should login successfully', async () => {
-    await device.reloadReactNative();
-    
-    await element(by.id('email')).typeText('john@example.com');
-    await element(by.id('password')).typeText('123456');
-    await element(by.text('Login')).tap();
-      
-    await expect(element(by.text('Welcome'))).toBeVisible();
-    await expect(element(by.id('email'))).toNotExist();
-  });
-  
-});
-```
 
 Setting up Android is a lot more involved. Follow the guide here: https://github.com/wix/Detox/blob/master/docs/Introduction.Android.md
