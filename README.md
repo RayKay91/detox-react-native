@@ -13,19 +13,23 @@ I'm using yarn but you can switch it out for `npm` too.
 7. Add `npx react-native run-ios` in `/.detoxrc.json` `apps.ios.build` . (You might need to add the property if it doesn't exist)
 8. In `/ios` run `pod install` -- install cocoa pods for ios
 9. Run `detox build -c ios` -- this will run the command specified in step 7. `-c` is short for `--configuration`
-10. Find your `APPNAME.app` binary and paste the path in `/.detoxrc.json` `apps.ios.binaryPath` (see below)
+10. Find your `APPNAME.app` binary and paste the path in `/.detoxrc.json` `apps.ios.binaryPath`*
 11. Run `detox test -c ios` -- this runs the tests in the `/e2e/` . The file names for the test should be `TESTNAME.e2e.js`
 12. You should see the test suite start to run.
 
-If you can't find your app binary or want to set it in a logical place follow the following steps:
+*If you can't find your app binary or want to set it in a logical place follow the following steps:
 
 1. Launch Xcode workspace for the relevant app.
-   2. File > Workspace settings...
-   3. Click Derived Data and set it to 'Workspace-relative location'
-   4. Click Advanced
-   5. Click Custom, set the drop down input to 'Relative to Workspace'
-   6. Done.
+   1. File > Workspace settings...
+   2. Click Derived Data and set it to 'Workspace-relative location'
+   3. Click Advanced
+   4. Click Custom, set the drop down input to 'Relative to Workspace'
+   5. Done.
 
+
+---
+
+---
 
 The Device object is globally available in the test files and has several methods. It facilitates control of the attached device.
 
@@ -70,6 +74,8 @@ Examples:
 
 - The list of expectations can be found here: https://github.com/wix/Detox/blob/master/docs/APIRef.Expect.md
 
+
+---
 ## Detox recorder
 This will greatly simplify the *match* and *action* part of the test writing. Any expectations should be written by yourself. I recommend checking out the webpage as it contains a few gifs of the recorder working, and explains how the colour system works when tapping buttons: 
  [wix/DetoxRecorder](https://github.com/wix/DetoxRecorder) .
@@ -86,6 +92,9 @@ To install:
 - You should see the recorder button(s) at the top of the screen. As you record tap things and move/scroll the screen it'll record it and output the code to the file on your desktop.
 - use `detox recorder --help` to view the help
 - Once recorded and added to your `*.e2e.js` test you can run `detox test` (plus `--configuration ios` or `android`) to start the test! Happy testing :D.
+
+
+--
 
 Example test:
 
