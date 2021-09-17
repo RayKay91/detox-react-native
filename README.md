@@ -67,14 +67,18 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+    
       <Text testID="text">Hello world!</Text>
+      
       <View style={{ height: 30 }} />
+      
       <TextInput
         value={text}
-        onChangeText={userInputtedtext => setText(userInputtedtext)}
+        onChangeText={userInputtedText => setText(userInputtedText)}
         testID="textInput"
         style={{ borderWidth: 1, borderColor: 'gray', width: 250, height: 40 }}
       />
+      
       <View style={{ height: 30 }} />
 
       <Button
@@ -82,6 +86,7 @@ export default function App() {
         onPress={() => Alert.alert('Button was tapped!')}
         testID={'button'}
       />
+      
     </View>
   )
 }
