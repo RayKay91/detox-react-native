@@ -1,5 +1,12 @@
 ## Quick guide to setting up Detox end 2 end testing with React Native
 
+
+
+
+https://user-images.githubusercontent.com/61206305/133856975-dbbc58a8-9db9-4d4b-b76a-f2ad408a3b3a.mp4
+
+
+
 ### (iOS & Jest as test runner)
 
 I'm using yarn but you can switch it out for `npm` too.
