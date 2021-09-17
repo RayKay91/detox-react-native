@@ -64,7 +64,7 @@ export default function App() {
       <View style={{ height: 30 }} />
       <TextInput
         value={text}
-        onChangeText={text => setText(text)}
+        onChangeText={userInputtedtext => setText(userInputtedtext)}
         testID="textInput"
         style={{ borderWidth: 1, borderColor: 'gray', width: 250, height: 40 }}
       />
