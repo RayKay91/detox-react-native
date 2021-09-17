@@ -10,7 +10,7 @@ I'm using yarn but you can switch it out for `npm` too.
 4. Sometimes you may need to run `yarn` / `npm i` here again just to make sure everything is up to date.
 5. Run `detox init -r jest` -- tell detox to use Jest as the test **r**unner, and scaffold some files
 6. Add `npx react-native run-ios` in `/.detoxrc.json` `apps.ios.build` . (You might need to add the `build` property if it doesn't exist)
-7. In `/ios` run `pod install` -- install cocoa pods for ios (if in bare workflow/ejected from expo)
+7. In `/ios` run `pod install` -- install cocoa pods for ios
 8. Run `detox build -c ios` -- this will run the command specified in step 7. `-c` is short for `--configuration`
 9. Find your `APPNAME.app` binary and paste the path in `/.detoxrc.json` `apps.ios.binaryPath` (see note).
 10. Run `detox test -c ios` -- this runs the tests in the `/e2e/` . The file names for the test should be `TESTNAME.e2e.js`
