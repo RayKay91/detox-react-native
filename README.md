@@ -77,6 +77,7 @@ Examples:
 
 Examples:
 -  `.tap()`
+-  `.typeText()`
 -  `.replaceText()`
 -   `.scroll()`
 -   `.longPress()` 
