@@ -6,16 +6,15 @@ I'm using yarn but you can switch it out for `npm` too.
 
 1. Run `yarn global add detox-cli` -- install the Detox CLI globally
 2. Run `brew tap wix/brew && brew install applesimutils` -- install `applesimutils` using Homebrew
-3. Run `yarn add -D detox` -- install Detox as a dev dependency
-4. Run `yarn add -D jest` -- install Jest as a dev dependency
-5. Sometimes you may need to run `yarn` / `npm i` here again just to make sure everything is up to date.
-6. Run `detox init -r jest` -- tell detox to use Jest as the test **r**unner, and scaffold some files
-7. Add `npx react-native run-ios` in `/.detoxrc.json` `apps.ios.build` . (You might need to add the property if it doesn't exist)
-8. In `/ios` run `pod install` -- install cocoa pods for ios
-9. Run `detox build -c ios` -- this will run the command specified in step 7. `-c` is short for `--configuration`
-10. Find your `APPNAME.app` binary and paste the path in `/.detoxrc.json` `apps.ios.binaryPath` (see note).
-11. Run `detox test -c ios` -- this runs the tests in the `/e2e/` . The file names for the test should be `TESTNAME.e2e.js`
-12. You should see the test suite start to run.
+3. Run `yarn add -D detox jes` -- install Detox and Jest as dev dependencies
+4. Sometimes you may need to run `yarn` / `npm i` here again just to make sure everything is up to date.
+5. Run `detox init -r jest` -- tell detox to use Jest as the test **r**unner, and scaffold some files
+6. Add `npx react-native run-ios` in `/.detoxrc.json` `apps.ios.build` . (You might need to add the property if it doesn't exist)
+7. In `/ios` run `pod install` -- install cocoa pods for ios
+8. Run `detox build -c ios` -- this will run the command specified in step 7. `-c` is short for `--configuration`
+9. Find your `APPNAME.app` binary and paste the path in `/.detoxrc.json` `apps.ios.binaryPath` (see note).
+10. Run `detox test -c ios` -- this runs the tests in the `/e2e/` . The file names for the test should be `TESTNAME.e2e.js`
+11. You should see the test suite start to run.
 
 Note: If you can't find your app binary or want to set it in a logical place follow these steps:
 
