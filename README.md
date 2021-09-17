@@ -83,7 +83,7 @@ Examples:
    
 #### The list of actions can be found here: https://github.com/wix/Detox/blob/master/docs/APIRef.ActionsOnElement.md
 
-3. The ***expectation*** is your expectation of what should be happening (the criteria on which the test should pass/fail)
+3. The ***expectation*** is your expectation of the matched component's state (the criteria on which the test should pass/fail)
 Examples:
 - `.toBeVisible()`
 - `.toHaveText()`
