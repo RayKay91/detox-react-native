@@ -30,21 +30,57 @@ Note: If you can't find your app binary or want to set it in a logical place fol
 ### Example test:
 
 ```js
-describe('Login flow', () => {
-    
-  it('should login successfully', async () => {
-    await device.reloadReactNative();
-    
-    await element(by.id('email')).typeText('john@example.com');
-    await element(by.id('password')).typeText('123456');
-    await element(by.text('Login')).tap();
-      
-    await expect(element(by.text('Welcome'))).toBeVisible();
-    await expect(element(by.id('email'))).toNotExist();
-  });
+describe('Example', () => {
+  beforeAll(async () => {
+    await device.launchApp()
+  })
+
+  it('should have hello world text', async () => {
+    await expect(element(by.id('text'))).toBeVisible()
+  })
+
+  it('should show allow typing in text input', async () => {
+    await element(by.id('textInput')).typeText('Hello world! This is so cool.')
+  })
+
+  it('should show button was tapped after button is pressed', async () => {
+    await element(by.id('button')).tap()
+    await expect(element(by.text('Button was tapped!'))).toBeVisible()
+  })
+})
   
 });
 ```
+
+For the following React Native code
+
+```jsx
+export default function App() {
+  const [text, setText] = useState('')
+
+  return (
+    <View style={styles.container}>
+      <Text testID="text">Hello world!</Text>
+      <View style={{ height: 30 }} />
+      <TextInput
+        value={text}
+        onChangeText={text => setText(text)}
+        testID="textInput"
+        style={{ borderWidth: 1, borderColor: 'gray', width: 250, height: 40 }}
+      />
+      <View style={{ height: 30 }} />
+
+      <Button
+        title="press me!"
+        onPress={() => Alert.alert('Button was tapped!')}
+        testID={'button'}
+      />
+    </View>
+  )
+}
+```
+
+
 
 ---
 
