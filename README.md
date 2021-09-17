@@ -95,6 +95,9 @@ Examples:
 
 ---
 ## Detox recorder
+
+#### there's an issue open on the repo for the recorder not working with yarn/npm scripts and on Android for now. Hopefully they release a fix soon. For now you'll just have to paste in the full command.
+
 This will greatly simplify the *match* and *action* part of the test writing. Any expectations should be written by yourself. I recommend checking out the webpage as it contains a few gifs of the recorder working, and explains how the colour system works when tapping buttons: 
  [wix/DetoxRecorder](https://github.com/wix/DetoxRecorder) .
  
