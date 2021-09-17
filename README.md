@@ -13,19 +13,18 @@ I'm using yarn but you can switch it out for `npm` too.
 7. Add `npx react-native run-ios` in `/.detoxrc.json` `apps.ios.build` . (You might need to add the property if it doesn't exist)
 8. In `/ios` run `pod install` -- install cocoa pods for ios
 9. Run `detox build -c ios` -- this will run the command specified in step 7. `-c` is short for `--configuration`
-10. Find your `APPNAME.app` binary and paste the path in `/.detoxrc.json` `apps.ios.binaryPath`*
+10. Find your `APPNAME.app` binary and paste the path in `/.detoxrc.json` `apps.ios.binaryPath` (see note).
 11. Run `detox test -c ios` -- this runs the tests in the `/e2e/` . The file names for the test should be `TESTNAME.e2e.js`
 12. You should see the test suite start to run.
 
-*If you can't find your app binary or want to set it in a logical place follow the following steps:
+Note: If you can't find your app binary or want to set it in a logical place follow these steps:
 
 1. Launch Xcode workspace for the relevant app.
    1. File > Workspace settings...
    2. Click Derived Data and set it to 'Workspace-relative location'
    3. Click Advanced
    4. Click Custom, set the drop down input to 'Relative to Workspace'
-   5. Done.
-
+   5. Run `npx react-native run-ios` or `detox build -c ios` and it should now output the binary to the `ios` folder in your project. Mine was `ios/Build/Products/Debug-iphonesimulator/APPNAME.app`. Use the path to your app binary in step 10.
 
 ---
 
