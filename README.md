@@ -13,7 +13,7 @@ I'm using yarn but you can switch it out for `npm` too.
 
 1. Run `yarn global add detox-cli` -- install the Detox CLI globally
 2. Run `brew tap wix/brew && brew install applesimutils` -- install `applesimutils` using Homebrew
-3. Run `yarn add -D detox jes` -- install Detox and Jest as dev dependencies
+3. Run `yarn add -D detox jest` -- install Detox and Jest as dev dependencies
 4. Sometimes you may need to run `yarn` / `npm i` here again just to make sure everything is up to date.
 5. Run `detox init -r jest` -- tell detox to use Jest as the test **r**unner, and scaffold some files
 6. Add `npx react-native run-ios` in `/.detoxrc.json` `apps.ios.build` . (You might need to add the `build` property if it doesn't exist)
