@@ -46,7 +46,7 @@ describe('Example', () => {
     await expect(element(by.id('text'))).toBeVisible()
   })
 
-  it('should show allow typing in text input', async () => {
+  it('should allow typing in text input', async () => {
     await element(by.id('textInput')).typeText('Hello world! This is so cool.')
   })
 
