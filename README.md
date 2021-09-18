@@ -145,7 +145,7 @@ Examples:
 ## Detox recorder
 
 
-https://github.com/wix/DetoxRecorder/blob/master/Documentation/Resources/Presentation.gif
+<img src="https://github.com/wix/DetoxRecorder/blob/master/Documentation/Resources/Presentation.gif"/>
 
 
 #### there's an issue open on the repo for the recorder not working with yarn/npm scripts and on Android for now. Hopefully they release a fix soon. For now you'll just have to paste in the full command and use the iOS simulator.
